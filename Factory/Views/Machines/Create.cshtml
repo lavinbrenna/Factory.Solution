@@ -14,15 +14,24 @@
     @Html.TextBoxFor(model => model.Type)
     @Html.LabelFor(model=> model.Location)
     @Html.TextBoxFor(model=> model.Location)
-    @Html.LabelFor(model => model.InspectionDate)
-    @Html.TextBoxFor(model => model.InspectionDate)
+    @Html.Label("Next Inspection Date")
+    @Html.TextBoxFor(model => model.InspectionDate, new { type = "date", required = "required" })
+
     @Html.Label("Is this machine currently operating?")
+    @Html.Label("Yes")
     @Html.RadioButtonFor(model => model.IsOperating, "Yes")
+    @Html.Label("No")
     @Html.RadioButtonFor(model => model.IsOperating, "No")
     @Html.Label("Is this machine malfunctioning?")
+    @Html.Label("Yes")
     @Html.RadioButtonFor(model => model.IsMalfunctioning, "Yes")
+    @Html.Label("No")
     @Html.RadioButtonFor(model => model.IsMalfunctioning, "No")
-    
+    @Html.Label("Is this machine being repaired?")
+    @Html.Label("Yes")
+    @Html.RadioButtonFor(model => model.IsBeingRepaired, "Yes")
+    @Html.Label("No")
+    @Html.RadioButtonFor(model => model.IsBeingRepaired, "No")
 
     <input type="submit" value="Add new machine"/>
 }
