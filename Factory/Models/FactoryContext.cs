@@ -9,7 +9,7 @@ namespace Factory.Models
     public DbSet<EngineerMachine> EngineerMachine {get;set;}
 
     public FactoryContext(DbContextOptions options) : base(options) {}
-    protected override void OnConfiguring(DbContextOptionsBuild optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseLazyLoadingProxies();
     }
