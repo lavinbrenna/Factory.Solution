@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>@Html.DisplayFor(model=> model.Name) Details</h2>
+<hr/>
+<p>@Html.DisplayNameFor(model=> model.Type): @Html.DisplayFor(model=> model.Type)</p>
+<p>Next Inspection Date: @Html.Label(Model.InspectionDate.ToShortDateString())</p>
+<p>Machine Location: @Html.DisplayFor(model=> model.Location)</p>
+<p>Is this machine currently operational? @Html.DisplayFor(model=> model.IsOperating)</p>
+<p>Is this machine malfunctioning? @Html.DisplayFor(model=> model.IsMalfunctioning)</p>
+<p>Is this machine being repaired? @Html.DisplayFor(model=> model.IsBeingRepaired)</p>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+
+}

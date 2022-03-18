@@ -3,14 +3,16 @@ using System;
 using Factory.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Factory.Migrations
 {
     [DbContext(typeof(FactoryContext))]
-    partial class FactoryContextModelSnapshot : ModelSnapshot
+    [Migration("20220318182755_Second")]
+    partial class Second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,7 +78,7 @@ namespace Factory.Migrations
                     b.Property<string>("IsBeingRepaired")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("IsMalfunctioning")
+                    b.Property<string>("IsMalfunctioned")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("IsOperating")
