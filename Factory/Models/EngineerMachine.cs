@@ -8,6 +8,5 @@ namespace Factory.Models
     public string Repair {get;set;}
     public virtual Machine machine {get;set;}
     public virtual Engineer engineer {get;set;}
-
   }
 }
