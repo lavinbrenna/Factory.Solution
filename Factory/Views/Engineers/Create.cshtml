@@ -8,19 +8,19 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-    @Html.LabelFor(model => model.Certifications)
-    @Html.TextBoxFor(model => model.Certifications)
-    @Html.Label("License Renewal Date")
-    @Html.TextBoxFor(model => model.LicenseRenewal, new { type = "date", required = "required" })
-    @Html.Label("Factory Location")
-    @Html.TextBoxFor(model => model.Location)
+   <p>@Html.LabelFor(model => model.Name)</p>
+   <p>@Html.TextBoxFor(model => model.Name)</p>
+   <p>@Html.LabelFor(model => model.Certifications)</p>
+   <p>@Html.TextBoxFor(model => model.Certifications)</p>
+   <p>@Html.Label("License Renewal Date")</p>
+   <p>@Html.TextBoxFor(model => model.LicenseRenewal, new { type = "date", required = "required" })</p>
+   <p>@Html.Label("Factory Location")</p>
+   <p>@Html.TextBoxFor(model => model.Location)</p>
 
-    @Html.Label("Assign to machine")
-    @Html.DropDownList("MachineId")
+    <p>@Html.Label("Assign to machine")</p>
+    <p>@Html.DropDownList("MachineId")</p>
 
-    <input type="submit" value="Add engineer"/>
+    <p><input type="submit" value="Add engineer"/></p>
 }
 <p>@Html.ActionLink("Back to engineers", "Index")</p>
 

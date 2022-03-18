@@ -14,7 +14,10 @@ nav{
 
 .container{
   font-family: 'Alegreya', serif;
-  align-content: center;
+  margin: auto;
+}
+h1, h2, h4, p{
+  text-align: center;
 }
 
 
