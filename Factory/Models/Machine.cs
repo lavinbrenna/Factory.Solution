@@ -13,9 +13,10 @@ namespace Factory.Models
     public string Name {get;set;}
     public string Type{get;set;}
     public DateTime InspectionDate{get;set;}
-    public bool isOperational {get;set;}
-    public bool isMalfunctioning {get;set;}
-    public bool isBeingRepaired {get;set;}
+    public string IsOperating {get;set;}
+    public string IsMalfunctioning {get;set;}
+    public string IsBeingRepaired {get;set;}
+
     public string Location {get;set;}
     public virtual ICollection<EngineerMachine> JoinEntities{get;set;}
 
