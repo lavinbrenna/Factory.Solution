@@ -28,7 +28,6 @@ namespace Factory.Controllers
     {
       _db.Machines.Add(machine);
       _db.SaveChanges();
-      machine.InspectionDate = machine.InspectionDate.Date;
       return RedirectToAction("Index");
     }
 
