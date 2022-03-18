@@ -17,7 +17,7 @@ namespace Factory.Models
     public bool isMalfunctioning {get;set;}
     public bool isBeingRepaired {get;set;}
     public string Location {get;set;}
-    public virtual ICollection<EngineerMachine> JoinEntities{get;}
+    public virtual ICollection<EngineerMachine> JoinEntities{get;set;}
 
   }
   
