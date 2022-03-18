@@ -16,7 +16,6 @@
     @Html.TextBoxFor(model=> model.Location)
     @Html.Label("Next Inspection Date")
     @Html.TextBoxFor(model => model.InspectionDate, new { type = "date", required = "required" })
-
     @Html.Label("Is this machine currently operating?")
     @Html.Label("Yes")
     @Html.RadioButtonFor(model => model.IsOperating, "Yes")

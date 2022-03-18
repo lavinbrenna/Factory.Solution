@@ -1,0 +1,35 @@
+@{
+  Layout = "_Layout";
+}
+@model Factory.Models.Machine
+<h2>Edit @Html.DisplayFor(model=> model.Name)'s Details</h2>
+
+@using (@Html.BeginForm())
+{
+  @Html.HiddenFor(model=> model.MachineId)
+  @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Type)
+    @Html.EditorFor(model => model.Type)
+    @Html.LabelFor(model=> model.Location)
+    @Html.EditorFor(model=> model.Location)
+    @Html.Label("Next Inspection Date")
+    @Html.EditorFor(model => model.InspectionDate, new { type = "date", required = "required" })
+    @Html.Label("Is this machine currently operating?")
+    @Html.Label("Yes")
+    @Html.RadioButtonFor(model => model.IsOperating, "Yes")
+    @Html.Label("No")
+    @Html.RadioButtonFor(model => model.IsOperating, "No")
+    @Html.Label("Is this machine malfunctioning?")
+    @Html.Label("Yes")
+    @Html.RadioButtonFor(model => model.IsMalfunctioning, "Yes")
+    @Html.Label("No")
+    @Html.RadioButtonFor(model => model.IsMalfunctioning, "No")
+    @Html.Label("Is this machine being repaired?")
+    @Html.Label("Yes")
+    @Html.RadioButtonFor(model => model.IsBeingRepaired, "Yes")
+    @Html.Label("No")
+    @Html.RadioButtonFor(model => model.IsBeingRepaired, "No")
+
+}
+

@@ -15,5 +15,16 @@
 
 @if(@Model.JoinEntities.Count == 0)
 {
-
+  <p>This machine does not have any engineers assigned to it.</p>
 }
+else{
+  <p>These are the engineers assigned to @Html.DisplayFor(model=> model.Name)</p>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Engineer.Name</li>
+  }
+}
+
+<p>@Html.ActionLink("Edit Machine", "Edit", new{id = Model.MachineId})</p>
+<p>@Html.ActionLink("Remove machine", "Delete", new {id=Model.MachineId})</p>
+<p>@Html.ActionLink("Back to List", "Index")</p>
