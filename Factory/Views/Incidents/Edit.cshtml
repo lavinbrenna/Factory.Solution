@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.EngineerMachine
+<h4>Edit incident details</h4>
+
+@using (Html.BeginForm())
+{
+  <p>@Html.LabelFor(model=> model.Description)</p>
+  <p>@Html.EditorFor(model=>model.Description)</p>
+  <p>@Html.Label("Incident Date")</p>
+  <p>@Html.EditorFor(model => model.Date, new {type ="date", required = "required"})</p>
+  <p>@Html.Label("Reassign Engineer")</p>
+  <p>@Html.DropDownList("EngineerId")</p>
+  <p>@Html.Label("Has this machine been fixed?")</p>
+  <p>@Html.Label("Yes")
+  @Html.RadioButtonFor(model => model.IsFixed, "Yes")
+  @Html.Label("No")
+  @Html.RadioButtonFor(model => model.IsFixed, "No")</p>
+  <p><input type="submit" value= "Submit"/></p>
+}
+<p>@Html.ActionLink("Back to incidents", "Index")</p>

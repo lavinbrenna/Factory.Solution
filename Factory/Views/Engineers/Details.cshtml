@@ -22,7 +22,11 @@ else
       <p><input type="submit" value="Delete"/></p>
     }
   }
+
 }
+<p>Certifications: @Html.DisplayFor(model => model.Certifications)</p>
+<p>Certification Renewal Date: @Html.Label(Model.LicenseRenewal.ToShortDateString())</p>
+<p>Factory Location: @Html.DisplayFor(model => model.Location)</p>
 
 <p>@Html.ActionLink("Back to engineers", "Index")</p>
 <p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>

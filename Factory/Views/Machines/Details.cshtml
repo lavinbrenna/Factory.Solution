@@ -18,7 +18,7 @@
   <p>This machine does not have any engineers assigned to it.</p>
 }
 else{
-  <p>These are the engineers assigned to @Html.DisplayFor(model=> model.Name)</p>
+  <p>These are the engineers assigned to @Html.DisplayFor(model=> model.Name): </p>
   @foreach(var join in Model.JoinEntities)
   {
     <p>@join.Engineer.Name</p>

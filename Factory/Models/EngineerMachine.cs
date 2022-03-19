@@ -1,12 +1,17 @@
+using System.Collections.Generic;
+using System;
 namespace Factory.Models
 {
   public class EngineerMachine
   {
-    public int EngineerMachineId {get;set;}
-    public int MachineId{get;set;}
-    public int EngineerId{get;set;}
-    public string Repair {get;set;}
-    public virtual Machine Machine {get;set;}
-    public virtual Engineer Engineer {get;set;}
+    public int EngineerMachineId { get; set; }
+    public int MachineId { get; set; }
+    public int EngineerId { get; set; }
+    public string Description { get; set; }
+    public string IsFixed { get; set; }
+    public DateTime Date { get; set; }
+    public virtual Machine Machine { get; set; }
+    public virtual Engineer Engineer { get; set; }
+
   }
 }

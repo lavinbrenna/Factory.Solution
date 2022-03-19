@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.EngineerMachine
+
+<h2>Report Details</h2>
+<hr />
+<p>@Html.DisplayNameFor(model=> model.Machine.Name): @Html.DisplayFor(model=> model.Machine.Name)</p>
+<p>Incident Report Date: @Html.Label(Model.Date.ToShortDateString())</p>
+<p>Incident Information: @Html.DisplayFor(model=> model.Description)</p>
+<p>Engineer assigned to repair: @Html.DisplayFor(model => model.Engineer.Name)</p>
+@if (Model.IsFixed == "")
+{
+  <p>Has this problem been fixed? @Html.DisplayFor(model=> model.IsFixed)</p>
+}
+else
+{
+  <p>Has this problem been fixed? No</p>
+}
+<p>@Html.ActionLink("Edit Incident", "Edit", new{id = Model.EngineerMachineId})</p>
+<p>@Html.ActionLink("Back to List", "Index")</p>

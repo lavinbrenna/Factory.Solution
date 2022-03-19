@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.EngineerMachine
+<h4>Report new incident</h4>
+
+@using (Html.BeginForm())
+{
+  <p>@Html.LabelFor(model=> model.Description)</p>
+  <p>@Html.TextBoxFor(model=>model.Description)</p>
+  <p>@Html.Label("Incident Date")</p>
+  <p>@Html.TextBoxFor(model => model.Date, new {type ="date", required = "required"})</p>
+  <p>@Html.Label("Machine needing service")</p>
+  <p>@Html.DropDownList("MachineId")</p>
+  <p>@Html.Label("Engineer to fix machine")</p>
+  <p>@Html.DropDownList("EngineerId")</p>
+  <p><input type="submit" value="Submit" /></p>
+}
+<p>@Html.ActionLink("Back to incidents", "Index")</p>

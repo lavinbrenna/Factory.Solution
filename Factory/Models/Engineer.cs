@@ -14,6 +14,8 @@ namespace Factory.Models
     public string Certifications {get;set;}
     public DateTime LicenseRenewal {get;set;}
     public string Location {get;set;}
+    public string IsIdle{get;set;}
+    public string IsWorking{get;set;}
     public virtual ICollection<EngineerMachine> JoinEntities{get;}
   }
 }

@@ -16,6 +16,16 @@
   <p>@Html.TextBoxFor(model => model.LicenseRenewal, new { type = "date", required = "required" })</p>
   <p>@Html.Label("Factory Location")</p>
   <p>@Html.TextBoxFor(model => model.Location)</p>
+  <p>@Html.Label("Is this engineer idle?")</p>
+    <p>@Html.Label("Yes")
+    @Html.RadioButtonFor(model => model.IsIdle, "Yes")
+    @Html.Label("No")
+    @Html.RadioButtonFor(model => model.IsIdle, "No")</p>
+    <p>@Html.Label("Is this engineer working on a machine?")</p>
+    <p>@Html.Label("Yes")
+    @Html.RadioButtonFor(model => model.IsWorking, "Yes")
+    @Html.Label("No")
+    @Html.RadioButtonFor(model => model.IsWorking, "No")</p>
 
     <p>@Html.Label("Assign to machine")</p>
     <p>@Html.DropDownList("MachineId")</p>
